@@ -1,4 +1,5 @@
 const path = require('path')
+const HtmlPlugin = require('./webpack/HtmlPlugin')
 
 module.exports = {
   module: {
@@ -8,5 +9,6 @@ module.exports = {
         loader: path.resolve(__dirname, 'webpack/CssLoader.js')
       }]
     }]
-  }
+  },
+  plugins: [new HtmlPlugin]
 }
